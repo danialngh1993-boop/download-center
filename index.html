@@ -4,29 +4,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>دانلود سنتر | دنیای بازی و نرم‌افزار</title>
-<meta name="description" content="مرکز دانلود بازی، نرم‌افزار و فایل‌های کاربردی">
+<meta name="description" content="مرکز دانلود بازی، نرم افزار و فایل های کاربردی">
+<title>دانلود سنتر | دنیای بازی و نرم افزار</title>
+
 <style>
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  --bg: #0b1020;
-  --panel: #151d35;
-  --panel2: #1b2745;
-  --purple: #9465ff;
-  --pink: #ec4899;
-  --cyan: #38d9ef;
-  --muted: #a8b2cc;
+  --bg: #080d1b;
+  --panel: #121b31;
+  --panel2: #192541;
+  --purple: #8958ff;
+  --cyan: #31d9ed;
+  --text: #f4f6ff;
+  --muted: #9ba9c5;
 }
 
 body {
-  font-family: Tahoma, sans-serif;
+  font-family: Tahoma, Arial, sans-serif;
   background: var(--bg);
-  color: #fff;
+  color: var(--text);
   line-height: 1.8;
 }
 
@@ -35,21 +36,34 @@ a {
   color: inherit;
 }
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+
 header {
-  background: rgba(15,22,43,.96);
-  border-bottom: 1px solid #293452;
-  padding: 17px 7%;
+  background: rgba(12,18,35,.96);
+  border-bottom: 1px solid #263251;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  min-height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .logo {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: bold;
-  color: #b99aff;
+  color: white;
 }
 
 .logo span {
@@ -58,61 +72,61 @@ header {
 
 nav {
   display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
+  gap: 28px;
 }
 
 nav a {
-  color: #d8def0;
-  font-size: 14px;
-  transition: .2s;
+  color: var(--muted);
+  transition: .3s;
 }
 
 nav a:hover {
   color: var(--cyan);
 }
 
+/* HERO */
+
 .hero {
-  padding: 85px 20px;
   text-align: center;
+  padding: 100px 20px 85px;
   background:
-    radial-gradient(ellipse at 15% 20%, #7c3aed55, transparent 40%),
-    radial-gradient(ellipse at 85% 80%, #ec489955, transparent 40%),
-    linear-gradient(120deg,#172554,#25205c,#401d56);
+    radial-gradient(circle at 20% 30%, #5431a5 0, transparent 40%),
+    radial-gradient(circle at 80% 50%, #153f81 0, transparent 45%),
+    linear-gradient(135deg,#101b3b,#25174a);
 }
 
-.hero .tag {
+.tag {
   display: inline-block;
-  padding: 6px 17px;
-  border: 1px solid #ffffff40;
+  border: 1px solid #8c72d8;
   border-radius: 30px;
-  color: #d8ceff;
+  padding: 7px 18px;
+  color: #d5c8ff;
+  margin-bottom: 22px;
   font-size: 13px;
-  margin-bottom: 20px;
 }
 
 .hero h1 {
-  font-size: clamp(28px,5vw,46px);
+  font-size: clamp(28px,5vw,48px);
   margin-bottom: 15px;
 }
 
 .hero h1 span {
-  color: #c4a8ff;
+  color: #b69aff;
 }
 
 .hero p {
-  color: #d4d8ee;
-  margin-bottom: 28px;
+  color: #d0d8ed;
+  margin-bottom: 35px;
 }
 
 .search-box {
-  max-width: 580px;
-  margin: auto;
   display: flex;
+  max-width: 650px;
+  margin: auto;
   background: white;
-  padding: 6px;
   border-radius: 15px;
-  box-shadow: 0 10px 35px #0004;
+  padding: 7px;
+  gap: 8px;
 }
 
 .search-box input {
@@ -120,207 +134,161 @@ nav a:hover {
   min-width: 0;
   border: none;
   outline: none;
-  padding: 13px;
+  padding: 14px;
   font-family: inherit;
   font-size: 14px;
-  color: #17203a;
-  background: transparent;
+  color: #222;
 }
 
 .search-box button {
   border: none;
   border-radius: 11px;
-  padding: 0 20px;
+  padding: 0 25px;
+  background: linear-gradient(135deg,var(--purple),#e33d9e);
   color: white;
-  background: linear-gradient(110deg,var(--purple),var(--pink));
-  cursor: pointer;
   font-family: inherit;
+  cursor: pointer;
 }
 
-.container {
-  max-width: 1160px;
-  padding: 45px 22px;
-  margin: auto;
+/* GENERAL SECTIONS */
+
+section {
+  padding: 65px 0;
 }
 
 .section-title {
-  font-size: 23px;
-  margin-bottom: 25px;
-  color: #d1c2ff;
+  font-size: 25px;
+  margin-bottom: 28px;
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 15px;
-  margin-bottom: 45px;
-}
-
-.stat {
-  background: var(--panel);
-  border: 1px solid #2b385b;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-}
-
-.stat strong {
-  display: block;
+.section-title span {
   color: var(--cyan);
-  font-size: 20px;
 }
 
-.stat span {
-  font-size: 13px;
-  color: var(--muted);
-}
+/* CATEGORIES */
 
 .categories {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 18px;
-  margin-bottom: 50px;
-}
-
-.category {
-  border: 1px solid #38436c;
-  border-radius: 17px;
-  padding: 24px;
-  background: linear-gradient(140deg,#1d294a,#171d36);
-  text-align: center;
-  cursor: pointer;
-  transition: .25s;
-  color: white;
-  font-family: inherit;
-}
-
-.category:hover,
-.category.active {
-  transform: translateY(-5px);
-  border-color: var(--purple);
-  background: linear-gradient(140deg,#30245e,#1c3158);
-}
-
-.category .emoji {
-  font-size: 38px;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.category strong {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.category small {
-  color: var(--muted);
-}
-
-.toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 24px;
-}
-
-.filters {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.filter {
-  background: var(--panel);
-  border: 1px solid #34405f;
-  color: #dce3f5;
-  border-radius: 25px;
-  padding: 8px 17px;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 13px;
-}
-
-.filter.active,
-.filter:hover {
-  background: #7547cf;
-  border-color: #a78bfa;
-  color: white;
-}
-
-.downloads {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 20px;
 }
 
+.category {
+  background: var(--panel);
+  border: 1px solid #293a60;
+  padding: 28px 15px;
+  text-align: center;
+  border-radius: 17px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.category:hover {
+  transform: translateY(-5px);
+  border-color: var(--cyan);
+  background: var(--panel2);
+}
+
+.category .emoji {
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+
+.category h3 {
+  color: var(--cyan);
+  font-size: 18px;
+}
+
+.category p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* DOWNLOAD CARDS */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.filter {
+  background: var(--panel);
+  border: 1px solid #304064;
+  color: white;
+  padding: 9px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.filter.active,
+.filter:hover {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
 .card {
   background: var(--panel);
-  border: 1px solid #293858;
-  border-radius: 18px;
+  border: 1px solid #283958;
+  border-radius: 17px;
   overflow: hidden;
-  transition: .25s;
+  transition: .3s;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   border-color: var(--purple);
-  box-shadow: 0 12px 30px #0004;
 }
 
-.cover {
-  height: 145px;
+.card-image {
+  height: 155px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 58px;
-  background: linear-gradient(135deg,#373078,#243e73);
+  font-size: 65px;
+  background: linear-gradient(135deg,#30205f,#173b69);
 }
 
-.card:nth-child(2) .cover {
-  background: linear-gradient(135deg,#174f75,#26356f);
+.card-content {
+  padding: 20px;
 }
 
-.card:nth-child(3) .cover {
-  background: linear-gradient(135deg,#6b286c,#392a75);
-}
-
-.card:nth-child(4) .cover {
-  background: linear-gradient(135deg,#285b62,#26336d);
-}
-
-.card:nth-child(5) .cover {
-  background: linear-gradient(135deg,#63365c,#283d75);
-}
-
-.card:nth-child(6) .cover {
-  background: linear-gradient(135deg,#394a7c,#253c62);
-}
-
-.card-body {
-  padding: 19px;
-}
-
-.card h3 {
+.card-content h3 {
   font-size: 17px;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
-.card p {
+.card-content p {
   color: var(--muted);
   font-size: 13px;
   min-height: 48px;
 }
 
-.card-btn {
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 12px;
+  margin: 17px 0;
+}
+
+.download-btn {
   display: block;
   text-align: center;
-  margin-top: 17px;
+  background: linear-gradient(135deg,var(--purple),#d93d9d);
   padding: 10px;
-  background: linear-gradient(100deg,var(--purple),var(--pink));
   border-radius: 10px;
-  font-size: 13px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
 }
 
 .empty {
@@ -330,64 +298,58 @@ nav a:hover {
   padding: 35px;
 }
 
-.about {
-  background: linear-gradient(120deg,#191d3d,#24224c);
-  border: 1px solid #343c68;
-  border-radius: 20px;
-  padding: 30px;
-  margin-top: 50px;
-}
-
-.about p {
-  color: var(--muted);
-  font-size: 14px;
-  margin-top: 10px;
-}
+/* FOOTER */
 
 footer {
-  background: #11182c;
-  border-top: 1px solid #293452;
+  background: #050917;
+  border-top: 1px solid #25324e;
   text-align: center;
-  padding: 30px 15px;
+  padding: 35px 15px;
   color: var(--muted);
   font-size: 13px;
 }
 
 footer strong {
-  color: #c4a8ff;
+  color: var(--cyan);
 }
 
-@media(max-width:750px) {
-  header {
-    justify-content: center;
-  }
+/* MOBILE */
 
-  nav {
-    justify-content: center;
-  }
-
-  .categories,
-  .downloads {
+@media(max-width:800px) {
+  .download-grid {
     grid-template-columns: repeat(2,1fr);
   }
 
-  .stats {
-    grid-template-columns: 1fr;
+  .categories {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  nav {
+    gap: 12px;
+    font-size: 12px;
   }
 }
 
-@media(max-width:480px) {
-  .categories,
-  .downloads {
+@media(max-width:550px) {
+  .nav {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .categories {
+    grid-template-columns: 1fr;
+  }
+
+  .download-grid {
     grid-template-columns: 1fr;
   }
 
   .hero {
-    padding: 60px 15px;
+    padding: 65px 15px;
   }
 
-  .toolbar {
-    align-items: flex-start;
+  .search-box button {
+    padding: 0 14px;
   }
 }
 </style>
@@ -396,188 +358,202 @@ footer strong {
 <body>
 
 <header>
-  <div class="logo">دانلود <span>سنتر</span> ✦</div>
-  <nav>
-    <a href="#">صفحه اصلی</a>
-    <a href="#categories">دسته‌بندی‌ها</a>
-    <a href="#downloads">دانلودها</a>
-    <a href="#about">درباره ما</a>
-  </nav>
+  <div class="container nav">
+    <a href="#" class="logo">دانلود <span>سنتر</span> ✦</a>
+
+    <nav>
+      <a href="#">صفحه اصلی</a>
+      <a href="#categories">دسته‌بندی‌ها</a>
+      <a href="#downloads">دانلودها</a>
+      <a href="#about">درباره ما</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-  <div class="tag">✦ دنیای بازی و نرم‌افزار</div>
-  <h1>به دنیای <span>دانلود سنتر</span> خوش آمدید</h1>
-  <p>بازی‌ها، نرم‌افزارها و فایل‌های کاربردی را در یک مکان پیدا کنید.</p>
+<main>
 
-  <div class="search-box">
-    <input class="search" type="text"
-    placeholder="نام بازی یا نرم‌افزار را جستجو کنید...">
-    <button type="button" id="searchBtn">جستجو</button>
+<section class="hero">
+  <div class="container">
+    <div class="tag">✦ دنیای بازی و نرم‌افزار</div>
+
+    <h1>به دنیای <span>دانلود سنتر</span> خوش آمدید</h1>
+
+    <p>بازی‌ها، نرم‌افزارها و فایل‌های کاربردی را در یک مکان پیدا کنید.</p>
+
+    <div class="search-box">
+      <input id="searchInput" type="text"
+        placeholder="نام بازی یا نرم‌افزار را جستجو کنید...">
+      <button id="searchBtn">جستجو</button>
+    </div>
   </div>
 </section>
 
-<main class="container">
-
-  <div class="stats">
-    <div class="stat">
-      <strong>🎮 بازی</strong>
-      <span>دنیای سرگرمی</span>
-    </div>
-    <div class="stat">
-      <strong>💻 نرم‌افزار</strong>
-      <span>ابزارهای کامپیوتری</span>
-    </div>
-    <div class="stat">
-      <strong>📁 فایل</strong>
-      <span>مجموعه فایل‌های کاربردی</span>
-    </div>
-  </div>
-
-  <section id="categories">
-    <h2 class="section-title">دسته‌بندی‌ها</h2>
+<section id="categories">
+  <div class="container">
+    <h2 class="section-title">دسته‌بندی <span>موضوعی</span></h2>
 
     <div class="categories">
-      <button class="category" data-filter="game">
-        <span class="emoji">🎮</span>
-        <strong>بازی‌های کامپیوتری</strong>
-        <small>دنیای بازی و سرگرمی</small>
-      </button>
 
-      <button class="category" data-filter="software">
-        <span class="emoji">💻</span>
-        <strong>نرم‌افزارها</strong>
-        <small>برنامه‌های کاربردی</small>
-      </button>
-
-      <button class="category" data-filter="file">
-        <span class="emoji">📁</span>
-        <strong>فایل‌های متنوع</strong>
-        <small>ابزارها و فایل‌ها</small>
-      </button>
-    </div>
-  </section>
-
-  <section id="downloads">
-    <div class="toolbar">
-      <h2 class="section-title">جدیدترین مجموعه‌ها</h2>
-
-      <div class="filters">
-        <button class="filter active" data-filter="all">همه</button>
-        <button class="filter" data-filter="game">بازی</button>
-        <button class="filter" data-filter="software">نرم‌افزار</button>
-        <button class="filter" data-filter="file">فایل</button>
+      <div class="category" data-category="game">
+        <div class="emoji">🎮</div>
+        <h3>بازی</h3>
+        <p>دنیای سرگرمی و بازی</p>
       </div>
+
+      <div class="category" data-category="software">
+        <div class="emoji">💻</div>
+        <h3>نرم‌افزار</h3>
+        <p>ابزارهای کامپیوتری</p>
+      </div>
+
+      <div class="category" data-category="file">
+        <div class="emoji">📁</div>
+        <h3>فایل‌های کاربردی</h3>
+        <p>مجموعه فایل‌های مفید</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="downloads">
+  <div class="container">
+
+    <h2 class="section-title">جدیدترین <span>دانلودها</span></h2>
+
+    <div class="filters">
+      <button class="filter active" data-filter="all">همه</button>
+      <button class="filter" data-filter="game">بازی</button>
+      <button class="filter" data-filter="software">نرم‌افزار</button>
+      <button class="filter" data-filter="file">فایل کاربردی</button>
     </div>
 
-    <div class="downloads">
+    <div class="download-grid" id="downloadGrid">
 
       <article class="card" data-category="game">
-        <div class="cover">🎮</div>
-        <div class="card-body">
-          <h3>بازی‌های کامپیوتری</h3>
-          <p>مجموعه بازی‌های جذاب کامپیوتری برای علاقه‌مندان به بازی.</p>
-          <a class="card-btn" href="#about">مشاهده مجموعه</a>
+        <div class="card-image">🎮</div>
+        <div class="card-content">
+          <h3>مجموعه بازی‌های کامپیوتری</h3>
+          <p>معرفی و دسترسی به مجموعه بازی‌های جذاب کامپیوتری.</p>
+          <div class="card-info">
+            <span>🎮 بازی</span>
+            <span>جدید</span>
+          </div>
+          <a href="#"
+            class="download-btn"
+            data-link="">مشاهده فایل‌ها</a>
         </div>
       </article>
 
       <article class="card" data-category="software">
-        <div class="cover">💻</div>
-        <div class="card-body">
+        <div class="card-image">💻</div>
+        <div class="card-content">
           <h3>نرم‌افزارهای ویندوز</h3>
-          <p>مجموعه برنامه‌های کاربردی برای کامپیوتر.</p>
-          <a class="card-btn" href="#about">مشاهده مجموعه</a>
+          <p>مجموعه ابزارهای کاربردی برای کامپیوتر و ویندوز.</p>
+          <div class="card-info">
+            <span>💻 نرم‌افزار</span>
+            <span>جدید</span>
+          </div>
+          <a href="#"
+            class="download-btn"
+            data-link="">مشاهده فایل‌ها</a>
         </div>
       </article>
 
       <article class="card" data-category="file">
-        <div class="cover">📁</div>
-        <div class="card-body">
+        <div class="card-image">📂</div>
+        <div class="card-content">
           <h3>فایل‌های کاربردی</h3>
-          <p>ابزارها و فایل‌های مفید برای استفاده روزمره.</p>
-          <a class="card-btn" href="#about">مشاهده مجموعه</a>
+          <p>فایل‌ها و ابزارهای مفید برای استفاده روزمره.</p>
+          <div class="card-info">
+            <span>📁 فایل</span>
+            <span>جدید</span>
+          </div>
+          <a href="#"
+            class="download-btn"
+            data-link="">مشاهده فایل‌ها</a>
         </div>
       </article>
 
       <article class="card" data-category="game">
-        <div class="cover">🕹️</div>
-        <div class="card-body">
+        <div class="card-image">🕹️</div>
+        <div class="card-content">
           <h3>بازی‌های کلاسیک</h3>
-          <p>مجموعه‌ای از بازی‌های خاطره‌انگیز.</p>
-          <a class="card-btn" href="#about">مشاهده مجموعه</a>
+          <p>معرفی بازی‌های قدیمی و خاطره‌انگیز.</p>
+          <div class="card-info">
+            <span>🎮 بازی</span>
+            <span>منتخب</span>
+          </div>
+          <a href="#" class="download-btn" data-link="">مشاهده فایل‌ها</a>
         </div>
       </article>
 
       <article class="card" data-category="software">
-        <div class="cover">⚙️</div>
-        <div class="card-body">
-          <h3>ابزارهای سیستمی</h3>
+        <div class="card-image">🛠️</div>
+        <div class="card-content">
+          <h3>ابزارهای ویندوز</h3>
           <p>ابزارهای مفید برای مدیریت و نگهداری سیستم.</p>
-          <a class="card-btn" href="#about">مشاهده مجموعه</a>
+          <div class="card-info">
+            <span>💻 نرم‌افزار</span>
+            <span>منتخب</span>
+          </div>
+          <a href="#" class="download-btn" data-link="">مشاهده فایل‌ها</a>
         </div>
       </article>
 
       <article class="card" data-category="file">
-        <div class="cover">🗂️</div>
-        <div class="card-body">
-          <h3>فایل‌های گرافیکی</h3>
-          <p>مجموعه فایل‌ها و منابع گرافیکی.</p>
-          <a class="card-btn" href="#about">مشاهده مجموعه</a>
+        <div class="card-image">📚</div>
+        <div class="card-content">
+          <h3>آموزش و مستندات</h3>
+          <p>مجموعه فایل‌های آموزشی و راهنمای کاربردی.</p>
+          <div class="card-info">
+            <span>📁 فایل</span>
+            <span>منتخب</span>
+          </div>
+          <a href="#" class="download-btn" data-link="">مشاهده فایل‌ها</a>
         </div>
       </article>
 
     </div>
 
     <div class="empty" id="empty">
-      موردی با این مشخصات پیدا نشد.
+      نتیجه‌ای برای جستجوی شما پیدا نشد.
     </div>
-  </section>
 
-  <section class="about" id="about">
-    <h2 class="section-title">درباره دانلود سنتر</h2>
-    <p>
-      دانلود سنتر با هدف گردآوری بازی‌ها، نرم‌افزارها
-      و فایل‌های کاربردی در یک محیط ساده و جذاب ایجاد شده است.
-      هدف ما فراهم کردن دسترسی آسان به محتوای مورد نیاز کاربران است.
-    </p>
-  </section>
+  </div>
+</section>
 
 </main>
 
-<footer>
-  <strong>دانلود سنتر ✦</strong>
-  <p>تمامی حقوق برای دانلود سنتر محفوظ است.</p>
+<footer id="about">
+  <p><strong>دانلود سنتر</strong> | دنیای بازی و نرم‌افزار</p>
+  <p>تمامی حقوق محفوظ است © 2026</p>
 </footer>
 
 <script>
-const searchInput = document.querySelector('.search');
-const cards = document.querySelectorAll('.card');
-const filters = document.querySelectorAll('[data-filter]');
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
+const cards = [...document.querySelectorAll('.card')];
+const filters = [...document.querySelectorAll('.filter')];
+const categories = [...document.querySelectorAll('.category')];
 const empty = document.getElementById('empty');
 
 let activeCategory = 'all';
 
-function normalize(text) {
-  return text.toLowerCase()
-    .replace(/ي/g, 'ی')
-    .replace(/ك/g, 'ک')
-    .trim();
-}
-
 function updateCards() {
-  const query = normalize(searchInput.value);
+  const search = searchInput.value.trim().toLowerCase();
   let visible = 0;
 
   cards.forEach(card => {
-    const text = normalize(card.innerText);
+    const text = card.innerText.toLowerCase();
     const category = card.dataset.category;
 
-    const matchesSearch = text.includes(query);
-    const matchesCategory =
+    const matchSearch = text.includes(search);
+    const matchCategory =
       activeCategory === 'all' ||
       category === activeCategory;
 
-    const show = matchesSearch && matchesCategory;
+    const show = matchSearch && matchCategory;
 
     card.style.display = show ? '' : 'none';
 
@@ -591,21 +567,49 @@ filters.forEach(button => {
   button.addEventListener('click', () => {
     activeCategory = button.dataset.filter;
 
-    filters.forEach(item => {
-      item.classList.toggle(
-        'active',
-        item.dataset.filter === activeCategory
-      );
-    });
+    filters.forEach(item =>
+      item.classList.toggle('active', item === button)
+    );
 
     updateCards();
   });
 });
 
-searchInput.addEventListener('input', updateCards);
+categories.forEach(category => {
+  category.addEventListener('click', () => {
+    activeCategory = category.dataset.category;
 
-document.getElementById('searchBtn')
-  .addEventListener('click', updateCards);
+    filters.forEach(item =>
+      item.classList.toggle(
+        'active',
+        item.dataset.filter === activeCategory
+      )
+    );
+
+    updateCards();
+
+    document.getElementById('downloads')
+      .scrollIntoView({behavior:'smooth'});
+  });
+});
+
+searchInput.addEventListener('input', updateCards);
+searchBtn.addEventListener('click', updateCards);
+
+searchInput.addEventListener('keydown', event => {
+  if (event.key === 'Enter') updateCards();
+});
+
+document.querySelectorAll('.download-btn').forEach(button => {
+  button.addEventListener('click', event => {
+    const link = button.dataset.link;
+
+    if (!link) {
+      event.preventDefault();
+      alert('لینک دانلود این بخش هنوز ثبت نشده است.');
+    }
+  });
+});
 </script>
 
 </body>
