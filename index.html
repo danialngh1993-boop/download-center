@@ -196,5 +196,20 @@
   © تمامی حقوق برای دانلود سنتر محفوظ است.
 </footer>
 
+<script>
+const searchInput = document.querySelector('.search');
+const cards = document.querySelectorAll('.card');
+
+searchInput.addEventListener('input', function () {
+  const searchText = this.value.trim().toLowerCase();
+
+  cards.forEach(function (card) {
+    const cardText = card.innerText.toLowerCase();
+
+    card.style.display = cardText.includes(searchText) ? '' : 'none';
+  });
+});
+</script>
+
 </body>
 </html>
