@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دانلود سنتر | مرکز دانلود بازی و نرم‌افزار</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Tahoma, sans-serif;
+      background: #101225;
+      color: white;
+    }
+
+    header {
+      padding: 22px 8%;
+      background: #191c38;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: #a78bfa;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .hero {
+      padding: 75px 20px;
+      text-align: center;
+      background: linear-gradient(120deg, #5626a5, #164e9b, #a12b82);
+    }
+
+    .hero h1 {
+      font-size: 35px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      margin-bottom: 25px;
+      line-height: 2;
+    }
+
+    .search {
+      width: min(90%, 480px);
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: #c4b5fd;
+    }
+
+    .categories {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .category {
+      background: #222747;
+      padding: 17px 25px;
+      border-radius: 12px;
+      color: white;
+      border: 1px solid #393f70;
+    }
+
+    .downloads {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1c2040;
+      padding: 22px;
+      border-radius: 16px;
+      border: 1px solid #343a68;
+    }
+
+    .card .emoji {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #b9bfd7;
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 11px 20px;
+      background: linear-gradient(90deg, #8b5cf6, #ec4899);
+      color: white;
+      text-decoration: none;
+      border-radius: 9px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #191c38;
+      color: #b9bfd7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">دانلود سنتر</div>
+  <nav>
+    <a href="#">صفحه اصلی</a>
+    <a href="#categories">دسته‌بندی‌ها</a>
+    <a href="#downloads">دانلودها</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>به دنیای دانلود خوش آمدید</h1>
+  <p>مرکز دانلود بازی، نرم‌افزار و فایل‌های کاربردی</p>
+  <input class="search" type="text" placeholder="نام فایل مورد نظر را جستجو کنید...">
+</section>
+
+<main>
+  <section id="categories">
+    <h2>دسته‌بندی‌ها</h2>
+    <div class="categories">
+      <div class="category">🎮 بازی</div>
+      <div class="category">💻 نرم‌افزار</div>
+      <div class="category">📁 فایل‌های کاربردی</div>
+    </div>
+  </section>
+
+  <section id="downloads">
+    <h2>جدیدترین دانلودها</h2>
+    <div class="downloads">
+
+      <div class="card">
+        <div class="emoji">🎮</div>
+        <h3>بازی‌های کامپیوتری</h3>
+        <p>مجموعه بازی‌های جذاب کامپیوتری</p>
+        <a class="download-btn" href="#">مشاهده فایل‌ها</a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">💻</div>
+        <h3>نرم‌افزارهای کاربردی</h3>
+        <p>برنامه‌های مورد نیاز کامپیوتر</p>
+        <a class="download-btn" href="#">مشاهده فایل‌ها</a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">📁</div>
+        <h3>فایل‌های متنوع</h3>
+        <p>ابزارها و فایل‌های مفید و کاربردی</p>
+        <a class="download-btn" href="#">مشاهده فایل‌ها</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  © تمامی حقوق برای دانلود سنتر محفوظ است.
+</footer>
+
+</body>
+</html>
